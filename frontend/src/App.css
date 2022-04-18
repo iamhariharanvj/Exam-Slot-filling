@@ -1,0 +1,49 @@
+
+select{
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin-left: 1rem;
+    border: 1px solid black;
+}
+.deleteIcon{
+    color: white;
+}
+table, th, td{
+    border: 1px solid black !important;
+    text-align: center;
+
+}
+
+input{
+    text-align: center;
+    border: none !important;
+    outline: none !important;
+    padding: 0.5rem;
+}
+.btn-primary ,.btn-warning {
+    margin: 1rem !important;
+}
+input[type="number"]{
+    border: 1px solid black !important;
+    width: 40px;
+    scrollbar-width: none;
+    color: black !important;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,select {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] ,select{
+  -moz-appearance: textfield;
+}
+span{
+    font-size: 1.5rem !important;
+    padding: 1rem;
+    font-family: Courier;
+}
