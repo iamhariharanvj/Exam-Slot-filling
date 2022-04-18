@@ -4,10 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "frontend": "cd frontend && npm start",
-    "api": "cd api && nodemon app.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run api\" \"npm run frontend\"",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "author": "HariHaran VJ",
   "license": "ISC",
