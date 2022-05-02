@@ -180,7 +180,9 @@ export const Slot = (props) => {
           <td><input defaultValue="IS5"></input></td>
           <td><input defaultValue={props.defFac}></input></td>
         </tr>
+        
       </table>
+
 
       <br />
     </div>
