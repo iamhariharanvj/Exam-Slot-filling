@@ -20,7 +20,7 @@ def getFaculty():
     global facData
 
     data = request.stream.read()
-    data = unquote(data)
+    data = unquote(data.decode())
     data = "&"+data
 
     df = pd.DataFrame([x.split(',') for x in data.split('&data[]=')])
@@ -36,7 +36,7 @@ def getFaculty():
 def getSlot():
     global slotData
     data = request.stream.read()
-    data = unquote(data)
+    data = unquote(data.decode())
 
     df = pd.DataFrame([x.split(',') for x in data.split('&data[]=')])
     df.dropna(inplace=True)
