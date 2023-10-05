@@ -182,5 +182,3 @@ def process():
     return dataframe.to_html()
 
 
-
-app.run(port =5000 ,debug=True)
