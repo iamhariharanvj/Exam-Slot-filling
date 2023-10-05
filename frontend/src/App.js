@@ -9,7 +9,7 @@ const App = () => {
   var [defFac, setdefFac] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/")
+    fetch("https://faculty-chart.onrender.com/")
       .then((response) => response.json())
       .then((data) => setFacList(data));
   }, [facList]);
@@ -25,9 +25,10 @@ const App = () => {
             body: JSON.stringify({ value: e.target.value }),
           };
 
-          await fetch(`http://localhost:5000/facDefault`, requestOptions).then(
-            (data) => console.log(data)
-          );
+          await fetch(
+            `https://faculty-chart.onrender.com/facDefault`,
+            requestOptions
+          ).then((data) => console.log(data));
 
           setFacList([]);
         }}
@@ -68,8 +69,8 @@ const App = () => {
             body: JSON.stringify({ faculty: "", maxEntries: "0" }),
           };
 
-          fetch(`http://localhost:5000/`, requestOptions).then((data) =>
-            console.log(data)
+          fetch(`https://faculty-chart.onrender.com/`, requestOptions).then(
+            (data) => console.log(data)
           );
 
           setFacList([]);
@@ -87,9 +88,10 @@ const App = () => {
             body: JSON.stringify({ value: "0" }),
           };
 
-          await fetch(`http://localhost:5000/facDefault`, requestOptions).then(
-            (data) => console.log(data)
-          );
+          await fetch(
+            `https://faculty-chart.onrender.com/facDefault`,
+            requestOptions
+          ).then((data) => console.log(data));
 
           setFacList([]);
         }}
@@ -231,9 +233,10 @@ const Faculty = (props) => {
                 maxEntries: props.entries,
               }),
             };
-            await fetch(`http://localhost:5000/`, requestOptions).then((data) =>
-              console.log(data)
-            );
+            await fetch(
+              `https://faculty-chart.onrender.com/`,
+              requestOptions
+            ).then((data) => console.log(data));
           }}
         ></input>
       </th>
@@ -254,9 +257,10 @@ const Faculty = (props) => {
                 maxEntries: e.target.value,
               }),
             };
-            await fetch(`http://localhost:5000/`, requestOptions).then((data) =>
-              console.log(data)
-            );
+            await fetch(
+              `https://faculty-chart.onrender.com/`,
+              requestOptions
+            ).then((data) => console.log(data));
           }}
         ></input>
 
@@ -268,7 +272,7 @@ const Faculty = (props) => {
             };
 
             await fetch(
-              `http://localhost:5000/${props.name}`,
+              `https://faculty-chart.onrender.com/${props.name}`,
               requestOptions
             ).then((data) => console.log(data));
           }}
