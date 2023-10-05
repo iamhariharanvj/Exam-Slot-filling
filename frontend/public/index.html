@@ -66,11 +66,12 @@
       
       
       $.ajax({
-        url: `http://localhost:5000/${route}`,
+        url: `http://hariharanvj.pythonanywhere.com/${route}`,
         type: 'post',
         data: {data},
         error: function(jqXHR, textStatus, errorThrown){
           alert("Please fill all the input fields");
+          console.log(errorThrown);
         },
         success: function(response){
 
